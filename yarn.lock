@@ -9895,6 +9895,10 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
+svg-pan-zoom@ariutta/svg-pan-zoom:
+  version "3.6.1"
+  resolved "https://codeload.github.com/ariutta/svg-pan-zoom/tar.gz/e3aa8dee15d9d30645e8a0ebea82c0ce3f16d0b8"
+
 svg-parser@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/svg-parser/-/svg-parser-2.0.3.tgz#a38f2e4e5442986f7ecb554c11f1411cfcf8c2b9"
