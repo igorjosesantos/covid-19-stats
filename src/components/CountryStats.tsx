@@ -56,7 +56,7 @@ const CountryStats: FC = () => {
 
     return (
       <>
-        <div className="CountryStats relative neumorph sm:shadow-neumorph-inset mb-4 overflow-hidden h-48 sm:h-64 md:h-92 lg:h-120">
+        <div className="relative neumorph sm:shadow-neumorph-inset mb-4 overflow-hidden h-56 sm:h-64 md:h-92 lg:h-120">
           <WorldMap
             countries={countries as ICountries}
             selectedCountry={selectedCountry.iso2}
