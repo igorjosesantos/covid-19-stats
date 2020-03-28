@@ -4017,6 +4017,14 @@ body {
   height: 16rem;
 }
 
+.h-92 {
+  height: 23rem;
+}
+
+.h-120 {
+  height: 30rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -15254,6 +15262,14 @@ body {
 
   .sm\:h-64 {
     height: 16rem;
+  }
+
+  .sm\:h-92 {
+    height: 23rem;
+  }
+
+  .sm\:h-120 {
+    height: 30rem;
   }
 
   .sm\:h-auto {
@@ -26496,6 +26512,14 @@ body {
     height: 16rem;
   }
 
+  .md\:h-92 {
+    height: 23rem;
+  }
+
+  .md\:h-120 {
+    height: 30rem;
+  }
+
   .md\:h-auto {
     height: auto;
   }
@@ -37736,6 +37760,14 @@ body {
     height: 16rem;
   }
 
+  .lg\:h-92 {
+    height: 23rem;
+  }
+
+  .lg\:h-120 {
+    height: 30rem;
+  }
+
   .lg\:h-auto {
     height: auto;
   }
@@ -48974,6 +49006,14 @@ body {
 
   .xl\:h-64 {
     height: 16rem;
+  }
+
+  .xl\:h-92 {
+    height: 23rem;
+  }
+
+  .xl\:h-120 {
+    height: 30rem;
   }
 
   .xl\:h-auto {
