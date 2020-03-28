@@ -40,7 +40,7 @@ const WorldMap: FC<Props> = ({ countries, selectedCountry, setSelectedCountry })
 
   useEffect(() => {
     panZoomWorldMap.current = svgPanZoom(worldMap.current!!, {
-      onPan: () => setIsDragging(true),
+      // onPan: () => setIsDragging(true),
     })
   }, [])
 
