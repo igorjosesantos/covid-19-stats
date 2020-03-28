@@ -54,10 +54,10 @@ const WorldMap: FC<Props> = ({ countries, selectedCountry, setSelectedCountry })
         width="100%"
         height="100%"
         viewBox="0 0 2000 1001"
-        onClick={() => {
-          if (isDragging)
-            setIsDragging(false)
-        }}
+        // onClick={() => {
+        //   if (isDragging)
+        //     setIsDragging(false)
+        // }}
       >
         {
           country.map((country: Record<string, any>) => {
@@ -71,12 +71,12 @@ const WorldMap: FC<Props> = ({ countries, selectedCountry, setSelectedCountry })
                   `cursor-pointer transition-colors duration-200 ease-in-out stroke-gray-500 ${selectedCountry === country.id ? 'fill-accent' : 'fill-current'}`
                 }
                 onClick={() => {
-                  if (!isDragging) {
+                  // if (!isDragging) {
                     // panZoomWorldMap?.current?.reset()
                     setSelectedCountry(country.id)
-                  }
+                  // }
                   
-                  setIsDragging(false)
+                  // setIsDragging(false)
                 }}
               >
                 <title>{countryName}</title>
