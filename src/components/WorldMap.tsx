@@ -128,6 +128,28 @@ const WorldMap: FC<Props> = ({ countries, selectedCountry, setSelectedCountry })
       return false
     }
 
+    const handleCountrySelection = (id: string): void => {
+      panZoomWorldMap?.current?.reset()
+
+      //REM: Apparently the values need some time to adjust after reset() is called, yet is seems to have no callback.
+      window.setTimeout(function() {
+        var tViewport = document.querySelector("g.svg-pan-zoom_viewport")
+        // @ts-ignore
+        var tMatrix = tViewport?.transform?.baseVal.getItem(0).matrix
+        // @ts-ignore
+        var tBBox = document.querySelector(`#${id}`)?.getBBox()
+        var tPoint = {
+          x: (tBBox.x + tBBox.width / 2) * tMatrix.a + tMatrix.e,
+          y: (tBBox.y + tBBox.height / 2) * tMatrix.d + tMatrix.f
+        }
+
+        //REM: Approximate values, I leave the exact calculation up to you.
+        panZoomWorldMap?.current?.zoomAtPoint(6, tPoint)
+      }, 500)
+      
+      setSelectedCountry(id)
+    }
+
     return country.map((country: Record<string, any>) => {
       const countryName = getCountryName(country.id)
 
@@ -135,11 +157,12 @@ const WorldMap: FC<Props> = ({ countries, selectedCountry, setSelectedCountry })
         return (
           <path
             key={country.id}
+            id={country.id}
             d={country.shape}
             className={`cursor-pointer transition-colors duration-200 ease-in-out stroke-gray-500 ${
               selectedCountry === country.id ? "fill-accent" : "fill-current"
             }`}
-            onClick={() => setSelectedCountry(country.id)}
+            onClick={() => handleCountrySelection(country.id)}
           >
             <title>{countryName}</title>
           </path>
