@@ -659,6 +659,21 @@ body {
   border-radius: 10px;
 }
 
+.btn-map {
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-weight: 700
+}
+
+.btn-map:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5)
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
